@@ -1,0 +1,41 @@
+Step 1 : install necessary files and update,
+sudo yum update -y
+sudo yum install nano
+sudo yum install dnf
+sudo yum install git
+
+Step 2 : For lampp setup follow this doc,
+https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-centos-7
+
+Step 3 : set html folder to public [ chmod 777 html/ ]
+Firewall er ag porjontu process korte hobe
+
+Step 4 : Update to php version 8
+https://computingforgeeks.com/how-to-install-php-8-on-centos-linux/
+
+Step 5 : install laravel
+https://operavps.com/how-to-install-laravel-on-centos-7/
+
+Step 6 : sudo chmod 777 html/ [ Apache html directory ]
+
+Step 7 : cloning git repo in html directory
+
+Step 8 : composer update
+
+Step 9 : Follow chmod options from laravel setup also then chmod 777 to [ storage, public vendior ]
+
+Step 10 : Virtual host option setup
+
+Step 11 : Database configuraton fixing
+
+getsebool -a | grep httpd
+sudo setsebool -P httpd_can_network_connect_db 1
+
+Step 12 : smtp config fix : 
+
+sudo setsebool -P httpd_can_network_connect on
+sudo setsebool -P httpd_can_sendmail on
+
+Step 13 : connect with database normally [with localhost or aws database]
+
+
