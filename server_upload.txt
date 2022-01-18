@@ -1,3 +1,7 @@
+Step 0 (if necessary) : Connecting Filezilla with AWS lightsail,
+
+https://github.com/tahmid-tf/AWS_lightsail_filezilla
+
 Step 1 : install necessary files and update,
 sudo yum update -y
 sudo yum install nano
