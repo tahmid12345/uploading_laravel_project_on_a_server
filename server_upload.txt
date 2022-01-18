@@ -38,4 +38,13 @@ sudo setsebool -P httpd_can_sendmail on
 
 Step 13 : connect with database normally [with localhost or aws database]
 
+Step 14 : Import database from cmdmysql> 
+
+use your_db_name;
+
+mysql> source /opt/file.sql;
+
+
+
+
 
