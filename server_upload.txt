@@ -1,4 +1,4 @@
-Step 0 (if necessary) : Connecting Filezilla with AWS lightsail,
+Step 0 (if necessary) : Connecting Filezilla with AWS lightsail [ included putty + puttygen setup on linux ],
 
 https://github.com/tahmid-tf/AWS_lightsail_filezilla
 
