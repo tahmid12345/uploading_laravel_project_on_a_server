@@ -1,0 +1,70 @@
+video resource 1: https://www.youtube.com/watch?v=qHo4nmc2tj8&list=LL&index=1&ab_channel=ChiefCloudArchitect
+video resource 2: https://www.youtube.com/watch?v=qwn1OmWxwIs&ab_channel=VikashNehra
+
+
+[ Follows => LAMP[PHP 7] - APPS+OS vps powered by bitnami ]
+
+1.
+First e namecheap e basic dns and @ record thik kore nite hobe
+
+
+
+2.
+Then apache restart korte hobe
+
+sudo /opt/bitnami/ctlscript.sh restart apache
+
+
+3.
+Then jei domain er shthe point kora hoise otake likhte hobe & carefully step by step likhe save kore nite hobe nicher command follow kore
+
+sudo /opt/bitnami/bncert-tool
+
+
+4.
+then bitnami sslconf thekeo root thik kore dite hobe
+
+cd /opt/bitnami/apache2/conf/bitnami/
+
+sudo nano bitnami-ssl.conf  diye directory point korte hoy
+
+
+
+5.
+then bitnami directory er vitore root thik kore dite hobe
+
+cd /opt/bitnami/apache2/conf/bitnami/
+
+then nano bitnami.conf     diye directory point korte hoy
+
+
+
+6.
+Jekhane bitnami er htdocs thake and project rakha hoy
+
+cd htdocs
+
+
+
+7.
+Auto renewal ssl ( 90 days por por auto renew hobe )
+
+sudo /opt/bitnami/ctlscript.sh stop
+sudo /opt/bitnami/letsencrypt/lego --tls --email="EMAIL-ADDRESS" --domains="DOMAIN" --path="/opt/bitnami/letsencrypt" renew --days 90
+sudo /opt/bitnami/ctlscript.sh start
+
+
+
+8.
+How to access bitnami default password ( eta hocche root password jeta diye mariadb te access korte hoy inside vps )
+
+sudo cat /home/bitnami/bitnami_application_password
+
+
+
+----------------------------------------- Additional tips { Connecting aws lightsail database with mysql workbench } ------------------------------------------------------
+
+
+Mysql workbench connecting with aws
+
+https://lightsail.aws.amazon.com/ls/docs/en_us/articles/amazon-lightsail-connecting-to-your-mysql-database
