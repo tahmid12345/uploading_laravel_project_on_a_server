@@ -48,7 +48,9 @@ use your_db_name;
 
 mysql> source /opt/file.sql;
 
+Step extra : Database export cmd 
 
+sudo mysqldump -uroot -pPassword@123 agrigate > db_backup.sql
 
 
 
